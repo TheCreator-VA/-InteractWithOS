@@ -15,3 +15,10 @@ def check_cpu_usage():
     # The function returns true if cpu usage is less than 75%, false otherwise.
     usage = psutil.cpu_percent(1) # Check the cpu usage for 1 second.
     return usage < 75
+
+# Main body to check what the functions return
+
+if not check_disk_usage("/") or not check_cpu_usage(): # if any function doesn't return true give error message
+    print("ERROR!")
+else:
+    print("Everything is OK!")
