@@ -1,0 +1,17 @@
+Print all lines in basicNative.txt which contain the word import.
+
+grep stringToSearch path (eg grep import F:/basicNative.txt)
+
+Print all lines in basicNative.txt which contain the word import and ignore case.
+
+grep -i stringToSearch path (eg grep -i import F:/basicNative.txt)
+
+NOTE: . is a wild card character that can substitute any character.
+Eg:
+grep n.t path
+will return words like net,not etc.
+
+^import will return lines starting with import
+import$ will print lines ending with import
+
+
