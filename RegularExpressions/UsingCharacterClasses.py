@@ -40,3 +40,12 @@ print(re.search(r"cats|dogs","I rarely like dogs or cats."))      # <_sre.SRE_Ma
 
 # to finnd all strings that match
 print(re.findall(r"cats|dogs","I rarely like dogs or cats."))     # ['dogs', 'cats']
+
+
+# What is .*?
+# . means any character and * means repeated any number of times.
+
+print(re.search(r"Py.*n","Pygmalion")) # <_sre.SRE_Match object; span=(0, 9), match='Pygmalion'>
+print(re.search(r"Py.*n","Python")) # <_sre.SRE_Match object; span=(0, 6), match='Python'>
+print(re.search(r"Py.*n","Python Programming")) # <_sre.SRE_Match object; span=(0, 17), match='Python Programmin'>
+
