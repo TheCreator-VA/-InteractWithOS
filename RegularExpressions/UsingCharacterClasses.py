@@ -45,8 +45,8 @@ print(re.findall(r"cats|dogs","I rarely like dogs or cats."))     # ['dogs', 'ca
 # What is .*?
 # . means any character and * means repeated any number of times.
 
-print(re.search(r"Py.*n","Pygmalion")) # <_sre.SRE_Match object; span=(0, 9), match='Pygmalion'>
-print(re.search(r"Py.*n","Python")) # <_sre.SRE_Match object; span=(0, 6), match='Python'>
+print(re.search(r"Py.*n","Pygmalion"))          # <_sre.SRE_Match object; span=(0, 9), match='Pygmalion'>
+print(re.search(r"Py.*n","Python"))             # <_sre.SRE_Match object; span=(0, 6), match='Python'>
 print(re.search(r"Py.*n","Python Programming")) # <_sre.SRE_Match object; span=(0, 17), match='Python Programmin'>
 
 # using + qualifier 
@@ -56,3 +56,9 @@ print(re.search(r"o+l+","woolly")) # <_sre.SRE_Match object; span=(1, 5), match=
 print(re.search(r"o+l+","oly"))    # <_sre.SRE_Match object; span=(0, 2), match='ol'>
 print(re.search(r"o+l+","oily"))   # None
 print(re.search(r"o+l+","cooly"))  # <_sre.SRE_Match object; span=(1, 4), match='ool'>
+
+# Using ? qualifier 
+# ? looks for none or single occurrence of a character
+
+print(re.search(r"p?each","To each their own.")) # <_sre.SRE_Match object; span=(3, 7), match='each'>
+print(re.search(r"p?each","I like peaches!"))    # <_sre.SRE_Match object; span=(7, 12), match='peach'>
