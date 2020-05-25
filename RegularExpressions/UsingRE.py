@@ -62,3 +62,18 @@ print(re.search(r"o+l+","cooly"))  # <_sre.SRE_Match object; span=(1, 4), match=
 
 print(re.search(r"p?each","To each their own.")) # <_sre.SRE_Match object; span=(3, 7), match='each'>
 print(re.search(r"p?each","I like peaches!"))    # <_sre.SRE_Match object; span=(7, 12), match='peach'>
+
+# Escape sequences to match special characters like . ^ etc
+
+print(re.search(r".com","welcome"))     # <_sre.SRE_Match object; span=(2, 6), match='lcom'>
+print(re.search(r"\.com","welcome"))    # None
+print(re.search(r"\.com","google.com")) # <_sre.SRE_Match object; span=(6, 10), match='.com'>
+
+
+# \w mathes alphanumeric characters or underscores
+print(re.search(r"\w*","hello world"))
+print(re.search(r"\w*","hello_world"))
+
+# \d matches digits
+# \s matches white spaces
+# www.regex101.com  for regex reference
