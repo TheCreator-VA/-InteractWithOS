@@ -49,3 +49,10 @@ print(re.search(r"Py.*n","Pygmalion")) # <_sre.SRE_Match object; span=(0, 9), ma
 print(re.search(r"Py.*n","Python")) # <_sre.SRE_Match object; span=(0, 6), match='Python'>
 print(re.search(r"Py.*n","Python Programming")) # <_sre.SRE_Match object; span=(0, 17), match='Python Programmin'>
 
+# using + qualifier 
+# + looks for one or more occurences of a character
+print(re.search(r"o+l+","ooly"))   # <_sre.SRE_Match object; span=(0, 3), match='ool'>
+print(re.search(r"o+l+","woolly")) # <_sre.SRE_Match object; span=(1, 5), match='ooll'>
+print(re.search(r"o+l+","oly"))    # <_sre.SRE_Match object; span=(0, 2), match='ol'>
+print(re.search(r"o+l+","oily"))   # None
+print(re.search(r"o+l+","cooly"))  # <_sre.SRE_Match object; span=(1, 4), match='ool'>
