@@ -16,3 +16,7 @@ print(s2[0:6]) # python
 
 s3 = "there is always an alternative way to stay away from trouble."
 print(re.search("[a-z]way",s3))   # <_sre.SRE_Match object; span=(10, 14), match='lway'>
+
+print(re.search("cloud[A-za-z0-9]","cloudy")) # <_sre.SRE_Match object; span=(0, 6), match='cloudy'>
+print(re.search("cloud[A-za-z0-9]","cloudY")) # <_sre.SRE_Match object; span=(0, 6), match='cloudY'>
+print(re.search("cloud[A-za-z0-9]","cloud9")) # <_sre.SRE_Match object; span=(0, 6), match='cloud9'>
