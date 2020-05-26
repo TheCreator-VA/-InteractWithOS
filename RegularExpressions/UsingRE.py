@@ -86,3 +86,11 @@ print(name.groups()) # ('Gosling', 'James')
 print(name[0])       # Gosling James
 print(name[1])       # Gosling
 print(name[2])       # James
+
+
+print(re.findall(r"\w{5}","Hello how are you doing?, I like strawberries."))      # ['Hello', 'doing', 'straw', 'berri']
+
+# enclosing a pattern with \b \b makes it search for a complete word
+print(re.findall(r"\b\w{5}\b","Hello how are you doing?, I like strawberries."))  # ['Hello', 'doing']
+print(re.findall(r"\w{4,}","Hello how are you doing?, I like strawberries."))     # ['Hello', 'doing', 'like', 'strawberries']
+print(re.findall(r"[Hh]\w{,7}","Hello how are you doing?, I like strawberries.")) # ['Hello', 'how']
