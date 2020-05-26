@@ -77,3 +77,12 @@ print(re.search(r"\w*","hello_world"))
 # \d matches digits
 # \s matches white spaces
 # www.regex101.com  for regex reference
+
+print(re.search(" ?at","b at"))  # <_sre.SRE_Match object; span=(1, 4), match=' at'>
+
+#  Capture groups
+name = re.search("^(\w*) (\w*)$","Gosling James")  
+print(name.groups()) # ('Gosling', 'James')
+print(name[0])       # Gosling James
+print(name[1])       # Gosling
+print(name[2])       # James
