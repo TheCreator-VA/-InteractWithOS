@@ -80,7 +80,7 @@ print(re.search(r"\w*","hello_world"))
 
 print(re.search(" ?at","b at"))  # <_sre.SRE_Match object; span=(1, 4), match=' at'>
 
-#  Capture groups
+#  Capture groups ()
 name = re.search("^(\w*) (\w*)$","Gosling James")  
 print(name.groups()) # ('Gosling', 'James')
 print(name[0])       # Gosling James
@@ -94,3 +94,11 @@ print(re.findall(r"\w{5}","Hello how are you doing?, I like strawberries."))    
 print(re.findall(r"\b\w{5}\b","Hello how are you doing?, I like strawberries."))  # ['Hello', 'doing']
 print(re.findall(r"\w{4,}","Hello how are you doing?, I like strawberries."))     # ['Hello', 'doing', 'like', 'strawberries']
 print(re.findall(r"[Hh]\w{,7}","Hello how are you doing?, I like strawberries.")) # ['Hello', 'how']
+
+
+# .split() method
+print(re.split(r"[.!?]","first sentence. Is it the second one? The last one!"))
+
+#.sub
+print(re.sub(r"[\w\.-]*@[\w]*\.[\w]*","[REDACTED]","recieved an email from johncena@outlook.com"))
+print(re.sub(r"^([\w .-]*), ([\w .-]*)$",r"\2 \1", "Ritchie, Dennis"))
