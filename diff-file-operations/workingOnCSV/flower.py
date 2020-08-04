@@ -29,7 +29,7 @@ def contents_of_file(filename):
     reader = csv.DictReader(f)
     # Process each item of the dictionary
     for row in reader:
-      return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])  # Sample: a pink carnation is annual
+      return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])  # Sample output: a pink carnation is annual
   return return_string
 
 #Call the function
