@@ -34,3 +34,12 @@ def contents_of_file(filename):
 
 #Call the function
 print(contents_of_file("flowers.csv"))
+
+# CSV file created will look like this:(create_file():)
+
+# name,color,type
+# carnation,pink,annual
+# daffodil,yellow,perennial
+# iris,blue,perennial
+# poinsettia,red,perennial
+# sunflower,yellow,annual
