@@ -29,17 +29,8 @@ def contents_of_file(filename):
     reader = csv.DictReader(f)
     # Process each item of the dictionary
     for row in reader:
-      return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])
+      return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])  # Sample: a pink carnation is annual
   return return_string
 
 #Call the function
 print(contents_of_file("flowers.csv"))
-
-# CSV file created will look like this:(create_file():)
-
-# name,color,type
-# carnation,pink,annual
-# daffodil,yellow,perennial
-# iris,blue,perennial
-# poinsettia,red,perennial
-# sunflower,yellow,annual
