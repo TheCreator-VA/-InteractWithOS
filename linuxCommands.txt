@@ -1,0 +1,20 @@
+# List hidden files 
+ ls -la
+
+# Change permissins of a file
+chmod
+
+# make direcrory
+ mkdir
+
+# remove an empty directory
+ rmdir
+
+# remove a non empty directory 
+ rm -rf
+
+# remove a file
+ rm
+
+# create an empty file 
+ touch filename
