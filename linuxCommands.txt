@@ -18,3 +18,18 @@ chmod
 
 # create an empty file 
  touch filename
+
+# copy file from 1 location to another
+ cp originalLocation/originalFileName newlocation/NewFileName
+
+# move file from 1 location to another
+ mv originalLocation/originalFileName newlocation/NewFileName
+
+# Remove all files from the directory
+ rm *
+
+# print to screen
+ echo
+
+# cat
+ show contents of file
