@@ -33,3 +33,15 @@ chmod
 
 # cat
  show contents of file
+
+# Store the output of a program in a file
+// Overwrite(>)
+ example: 
+ python3 example.py > output.txt
+
+// Append(>>)
+ example:
+ python3 example.py >> output.txt
+
+# Read input from a file
+ 
