@@ -24,7 +24,7 @@ def contents_of_file(filename):
   create_file(filename)
 
   # Open the file
-  with open("flowers.csv") as f:
+  with open(filename) as f:
     # Read the rows of the file into a dictionary
     reader = csv.DictReader(f)
     # Process each item of the dictionary
