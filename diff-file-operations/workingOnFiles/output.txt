@@ -1,0 +1,3 @@
+Adding data to file
+Python uses escape sequences for newline, tabs etc
+This code is a simple example of writting data to a file from python.
