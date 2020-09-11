@@ -1,0 +1,6 @@
+# TASKS:
+# 1) To create a csv file as user_statistics which contains username 
+#    and no. of error logs and info logs by the user, ordered by username alphabetically.
+# 2) To create a csv file which lists unique errors with no. 
+#    of times each appears in a reverse sorted order by no. of 
+#    errors i.e. most frequent to least frequent
