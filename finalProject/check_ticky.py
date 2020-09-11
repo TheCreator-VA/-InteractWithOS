@@ -68,3 +68,12 @@ for key in userlogin_error.keys():
     else:
         dic["INFO"] = 0
     info_error.append(dic)
+
+# Now add any user in list which is present in info-dictionary but not in error-dictionary
+for key in userlogin_info.keys():
+    if key not in userlogin_error:
+        dic = {}
+        dic["Username"] = key
+        dic["ERROR"] = 0
+        dic["INFO"] = userlogin_info[key]
+        info_error.append(dic)
