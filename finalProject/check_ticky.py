@@ -39,3 +39,15 @@ for line in file2:
         errorDict[error] += 1
 
 file2.close()
+
+file3 = open("infologs.log","r")
+
+userlogin_info = {}
+
+for line in file3:
+    name = re.search(namepattern,line)
+    userName = name[1][1:-1]
+    if userName not in userlogin2:
+        userlogin2[userName]= 1
+    else:
+        userlogin2[userName] += 1
