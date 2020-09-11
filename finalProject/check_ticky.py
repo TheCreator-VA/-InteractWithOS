@@ -77,3 +77,5 @@ for key in userlogin_info.keys():
         dic["ERROR"] = 0
         dic["INFO"] = userlogin_info[key]
         info_error.append(dic)
+
+info_error = sorted(info_error, key = lambda i: i['Username'])
