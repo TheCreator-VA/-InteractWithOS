@@ -1,4 +1,5 @@
 import re
+import operator
 
 error = r"ERROR"
 info = r"INFO"
