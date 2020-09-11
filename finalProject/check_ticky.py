@@ -47,7 +47,7 @@ userlogin_info = {}
 for line in file3:
     name = re.search(namepattern,line)
     userName = name[1][1:-1]
-    if userName not in userlogin2:
+    if userName not in userlogin_info:
         userlogin2[userName]= 1
     else:
-        userlogin2[userName] += 1
+        userlogin_info[userName] += 1
