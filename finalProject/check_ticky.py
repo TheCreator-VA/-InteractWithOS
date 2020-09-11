@@ -57,3 +57,14 @@ file3.close()
 
 # sort the error-count dictionary
 errorDict = sorted(errorDict.items(), key = operator.itemgetter(1),reverse = True)
+
+info_error = []               # list of dictionaries of error and info
+for key in userlogin_error.keys():
+    dic = {}
+    dic["Username"] = key
+    dic["ERROR"] = userlogin_error[key]
+    if key in userlogin_info:
+        dic["INFO"] = userlogin_info[key]
+    else:
+        dic["INFO"] = 0
+    info_error.append(dic)
