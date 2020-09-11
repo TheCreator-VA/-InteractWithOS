@@ -1,5 +1,6 @@
 import re
 import operator
+import csv
 
 error = r"ERROR"
 info = r"INFO"
@@ -79,3 +80,5 @@ for key in userlogin_info.keys():
         info_error.append(dic)
 
 info_error = sorted(info_error, key = lambda i: i['Username'])
+
+# Writting CSVs
