@@ -87,3 +87,9 @@ with open("user_statistics.csv", "w") as us:
     writer = csv.DictWriter(us, fieldnames = keys)
     writer.writeheader()
     writer.writerows(info_error)
+
+with open("error_message.csv",'w') as er:
+    err_writer=csv.writer(er)
+    err_writer.writerow(['Error','Count'])
+    for row in errorDict:
+        err_writer.writerow(row)
