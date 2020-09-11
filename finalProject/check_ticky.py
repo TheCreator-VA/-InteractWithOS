@@ -19,9 +19,18 @@ file3.close()
 file2 = open("C:\\Users\\Vansh Arora\\Desktop\\FinalProject\\errorlogs.log","r")
 
 errorPattern = r"^.*(ERROR) (.*) (\(.*\))$"
-errorDict = {}
+errorDict = {}                      # Dictionary for error type and count
+namepattern = r"^.*(\(.*\))$"   
+userlogin_error = {}                # Dictionary for no. of errorlogs corresponding to a username
 
 for line in file2:
+    name = re.search(namepattern,line)
+    userName = name[1][1:-1]
+    if userName not in userlogin_error:
+        userlogin_error[userName] = 1
+    else:
+        userlogin_error[userName] += 1
+
     errorSearch = re.search(errorPattern,line)
     error = errorSearch[2]
     if error not in errorDict:
