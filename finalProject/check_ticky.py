@@ -15,3 +15,16 @@ for line in file:
 file.close()
 file2.close()
 file3.close()
+
+file2 = open("C:\\Users\\Vansh Arora\\Desktop\\FinalProject\\errorlogs.log","r")
+
+errorPattern = r"^.*(ERROR) (.*) (\(.*\))$"
+errorDict = {}
+
+for line in file2:
+    errorSearch = re.search(errorPattern,line)
+    error = errorSearch[2]
+    if error not in errorDict:
+        errorDict[error] = 1
+    else:
+        errorDict[error] += 1
