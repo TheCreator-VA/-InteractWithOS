@@ -4,3 +4,9 @@
 # 2) To create a csv file which lists unique errors with no. 
 #    of times each appears in a reverse sorted order by no. of 
 #    errors i.e. most frequent to least frequent
+
+# Approach:
+# Create 2 dictionaries 1 for info logs count and 1 for error logs count
+#   dictionary1 = {"username":"info logs count"}
+#   dictionary2 = {"username":"error logs count"}
+# Create another dictionary for errors
