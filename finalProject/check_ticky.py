@@ -82,12 +82,15 @@ for key in userlogin_info.keys():
 info_error = sorted(info_error, key = lambda i: i['Username'])
 
 # Writting CSVs
+
+# user_statistics
 keys = ['Username','INFO','ERROR']
 with open("user_statistics.csv", "w") as us:
     writer = csv.DictWriter(us, fieldnames = keys)
     writer.writeheader()
     writer.writerows(info_error)
 
+# error_message
 with open("error_message.csv",'w') as er:
     err_writer=csv.writer(er)
     err_writer.writerow(['Error','Count'])
