@@ -37,3 +37,5 @@ for line in file2:
         errorDict[error] = 1
     else:
         errorDict[error] += 1
+
+file2.close()
