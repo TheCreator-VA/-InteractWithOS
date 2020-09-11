@@ -54,3 +54,6 @@ for line in file3:
         userlogin_info[userName] += 1
 
 file3.close()
+
+# sort the error-count dictionary
+errorDict = sorted(errorDict.items(), key = operator.itemgetter(1),reverse = True)
