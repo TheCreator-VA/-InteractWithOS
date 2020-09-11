@@ -51,3 +51,5 @@ for line in file3:
         userlogin2[userName]= 1
     else:
         userlogin_info[userName] += 1
+
+file3.close()
