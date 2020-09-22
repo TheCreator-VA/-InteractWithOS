@@ -2,7 +2,7 @@
 # Return a string as dept: names
 
 def group_list(group, users):
-    members = group + ":" +" "
+    members = group + ":" + " "
     for user in users:
         members+= user+','
     members = members[:len(members)-1]
